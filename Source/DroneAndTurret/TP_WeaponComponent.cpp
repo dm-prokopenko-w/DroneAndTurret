@@ -66,9 +66,7 @@ void UTP_WeaponComponent::Fire()
 void UTP_WeaponComponent::AttachWeapon(ADroneAndTurretCharacter* TargetCharacter)
 {
 	Character = TargetCharacter;
-
-	// Check that the character is valid, and has no rifle yet
-	if (Character == nullptr || Character->GetHasRifle())
+	if (Character == nullptr)
 	{
 		return;
 	}
